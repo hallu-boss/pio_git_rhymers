@@ -5,8 +5,14 @@ public class DefaultCountingOutRhymer {
     public int getTotal() {
 		return total;
 	}
+  
+    private static final int maksymalnyRozmiarDanych = 12;
 
-	private int[] numbers = new int[12];
+	private static final int wartoscBledu = -1;
+
+	private static final int indeksOstatniegoElementu = 11;
+
+	private int[] numbers = new int[maksymalnyRozmiarDanych];
 
     public int total = -1;
 
@@ -16,22 +22,22 @@ public class DefaultCountingOutRhymer {
     }
 
     public boolean callCheck() {
-        return total == -1;
+        return total == wartoscBledu;
     }
 
     public boolean isFull() {
-        return total == 11;
+        return total == indeksOstatniegoElementu;
     }
 
     protected int peekaboo() {
         if (callCheck())
-            return -1;
+            return wartoscBledu;
         return numbers[total];
     }
 
     public int countOut() {
         if (callCheck())
-            return -1;
+            return wartoscBledu;
         return numbers[total--];
     }
 
