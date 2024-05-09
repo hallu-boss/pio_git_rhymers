@@ -2,6 +2,10 @@ package edu.kis.vh.nursery;
 
 public class DefaultCountingOutRhymer {
 
+    public int getTotal() {
+		return total;
+	}
+  
     private static final int maksymalnyRozmiarDanych = 12;
 
 	private static final int wartoscBledu = -1;
