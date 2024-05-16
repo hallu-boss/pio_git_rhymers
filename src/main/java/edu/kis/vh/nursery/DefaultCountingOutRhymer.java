@@ -21,6 +21,9 @@ public class DefaultCountingOutRhymer {
             numbers[++total] = in;
     }
 
+    /**
+     * @return czy numbers jest puste
+     */
     public boolean callCheck() {
         return total == wartoscBledu;
     }
